@@ -1,14 +1,4 @@
-const nav = document.querySelector("nav ul");
-const burger = document.createElement("div");
-burger.classList.add("burger");
-burger.innerHTML = "☰";
-document.querySelector("header").prepend(burger);
-
-burger.addEventListener("click", () => {
-  nav.classList.toggle("active");
-});
-window.location.href="index.html";
-  
+ 
 const backToTop = document.createElement("button");
 backToTop.id = "backToTop";
 backToTop.textContent = "↑";
