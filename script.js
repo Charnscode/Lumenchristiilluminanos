@@ -12,6 +12,10 @@ window.addEventListener("scroll", () => {
   }
 });
 
+if (ul) {
+  ul.appendChild(li);
+}
+
 backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
