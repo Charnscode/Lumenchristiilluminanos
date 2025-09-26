@@ -21,7 +21,7 @@ Un site web chrétien dédié à la lumière du Christ, au partage spirituel et 
 - Design responsive pour tous les appareils  
 
 ## 📷 Aperçu
- i.png j.png h.png
+ ![Présentationdu site](https://raw.githubusercontent.com/Charnscode/Lumenchristiilluminanos/main/i.png)
 
 ## 🌍 Hébergement
 Le site est actuellement hébergé sur **GitHub Pages et Vercel**.  
