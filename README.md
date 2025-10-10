@@ -15,6 +15,7 @@ Un site web chrétien dédié à la lumière du Christ, au partage spirituel et 
 - **JavaScript** pour l’interactivité  
 
 ## 🚀 Fonctionnalités
+-Partage des Miracle eucharistique 
 - Pages dédiées aux saints et à leur histoire  
 - Prières et textes spirituels  
 - Navigation claire et fluide  
