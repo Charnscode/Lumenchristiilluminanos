@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KOUGBE ZOGAN Aurras Charnel — Servant de messe</title>
+  <link rel="stylesheet" href="style3.css" />
+  <meta name="description" content="Profil de KOUGBE ZOGAN Aurras Charnel — servant de messe, partage de foi ." />
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Les miracles eucharistiques</a></li>
+        <li><a href="about.html">La vie des saints</a></li>
+        <li><a href="prions.html">Prières</a></li>
+        <li><a href="auteur.html" class="active">Auteur</a></li>
+      </ul>
+    </nav>
+
+    <!-- Navigation interne -->
+    <div class="container header-inner">
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#accueil">Accueil</a>
+        <a href="#apropos">À propos</a>
+        <a href="#temoignage">Témoignage</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Bouton mode clair/sombre -->
+  <button class="bout" id="lightModeToggle">🌞</button>
+
+  <main>
+    <section id="accueil" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Aurras KOUGBE ZOGAN<br /><span class="muted">Servant de messe • </span></h1>
+          <p>Servir à l'autel n'est pas seulement un devoir : c'est une vocation...</p>
+          <div class="hero-cta">
+            <a class="btn" href="https://charnscode.github.io/Aurras-blog/">En savoir plus</a>
+            <a class="btn ghost" href="#contact">Me contacter</a>
+          </div>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <div class="card-inner">
+            <p class="card-body">"Ad maiorem Dei gloriam" (AMDG): Que tout ce que je fais soit pour la gloire de Dieu.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- À propos -->
+    <section id="apropos" class="section-alt">
+      <h2>À propos de ma foi</h2>
+      <p>La liturgie et la prière m'ont formé. En tant que servant de messe...</p>
+      <ul class="list">
+        <li><strong>Mission :</strong> Servir l'autel avec fidélité et respect.</li>
+        <li><strong>Valeurs :</strong> Humilité, service, prière.</li>
+      </ul>
+    </section>
+
+    <!-- Témoignage -->
+    <section id="temoignage" class="section-alt">
+      <div class="container">
+        <h2>Témoignage</h2>
+        <blockquote class="quote">"Servir m'a appris que l'amour se vit dans les petites choses..."</blockquote>
+        <p>Je partage des moments de ma vie de servant, des prières et des réflexions.</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section-alt"">
+      <h2>Contact</h2>
+      <p>Tu veux échanger, poser une question ou proposer une ressource ?</p>
+      <form id="contactForm" class="contact-form" action="#" onsubmit="return submitForm(event)">
+        <label>Nom <input type="text" name="name" required placeholder="Votre nom" /></label>
+        <label>E-mail <input type="email" name="email" required placeholder=".....@gmail.com" /></label>
+        <label>Message <textarea name="message" rows="4" required placeholder="Votre message"></textarea></label>
+        <div class="form-actions">
+          <button type="submit" class="btn">Envoyer</button>
+          <button type="reset" class="btn ghost">Effacer</button>
+        </div>
+        <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Pied de page -->
+  <footer>
+    © Charnscode
+    <p>"LUMEN CHRISTI ILLUMINA NOS"</p>
+    <div class="container">
+      <a class="btn_ghost" href="index.html">← Retour</a>
+    </div>
+  </footer>
+
+  <script src="script3.js"></script>
+</body>
+</html>

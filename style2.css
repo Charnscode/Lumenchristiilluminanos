@@ -1,0 +1,257 @@
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+  background: #fff8f0; /* ivoire doux */
+  color: #4a3b2f;
+  line-height: 1.8;
+  transition: background 0.5s, color 0.5s;
+  overflow-x: hidden;
+}
+
+/* === MODE SOMBRE RAFFINÉ === */
+body.dark-mode {
+  background: #1a1a1a;
+  color: #f5f5f5;
+}
+
+/* === BOUTON MODE SOMBRE === */
+.mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(45deg, #d9a94c, #f3d46d);
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 999;
+  border: none;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+.mode-toggle:hover {
+  background: linear-gradient(45deg, #b78b32, #f3d46d);
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* === HEADER === */
+header {
+  text-align: center;
+  padding: 80px 20px 50px;
+  background: linear-gradient(135deg, #fff5eb, #fff8f0);
+  border-bottom: 2px solid #d9a94c;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+  transition: all 0.5s ease;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #d9a94c;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+header p {
+  font-size: 1.15rem;
+  color: #4a3b2f;
+  margin-bottom: 10px;
+}
+
+/* === CONTENEUR === */
+.container {
+  width: 90%;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* === BLOC PRIÈRE === */
+.prayer {
+  background: linear-gradient(145deg, #fff5e0, #fff7e5);
+  border-left: 8px solid #d9a94c;
+  padding: 30px 35px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+  transform: translateY(30px);
+  opacity: 0;
+  animation: fadeUp 0.8s forwards;
+}
+
+.prayer:nth-child(1) { animation-delay: 0.1s; }
+.prayer:nth-child(2) { animation-delay: 0.2s; }
+.prayer:nth-child(3) { animation-delay: 0.3s; }
+.prayer:nth-child(4) { animation-delay: 0.4s; }
+.prayer:nth-child(5) { animation-delay: 0.5s; }
+.prayer:nth-child(6) { animation-delay: 0.6s; }
+
+.prayer::before {
+  content: "✦";
+  position: absolute;
+  top: 20px;
+  left: -25px;
+  font-size: 1.5rem;
+  color: #d9a94c;
+  transition: transform 0.3s ease;
+}
+
+.prayer:hover::before {
+  transform: rotate(20deg) scale(1.2);
+}
+
+.prayer:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+  transform: translateY(-5px);
+}
+
+.prayer h3 {
+  color: #b78b32;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.03);
+}
+
+.prayer p {
+  color: #4a3b2f;
+  font-size: 1.05rem;
+  text-align: justify;
+}
+
+/* === FOOTER === */
+footer {
+  background: linear-gradient(135deg, #fff5eb, #fff8f0);
+  color: #4a3b2f;
+  text-align: center;
+  padding: 50px 20px;
+  border-top: 2px solid #d9a94c;
+  border-radius: 30px 30px 0 0;
+  box-shadow: 0 -6px 25px rgba(0,0,0,0.08);
+  transition: all 0.5s ease;
+}
+
+footer h3 {
+  color: #d9a94c;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+footer a {
+  color: #b78b32;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: 600;
+}
+
+footer a:hover {
+  color: #d9a94c;
+}
+
+/* === BOUTONS === */
+.btn {
+  background: #d9a94c;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.btn:hover {
+  background: #b78b32;
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* === MODE SOMBRE RAFFINÉ === */
+body.dark-mode .prayer {
+  background: #1e1e1e;
+  border-left: 8px solid #f3d46d;
+  color: #f5f5f5;
+}
+
+body.dark-mode p {
+  color: #f5f5f5;
+}
+
+body.dark-mode .prayer::before {
+  color: #f3d46d;
+}
+body.dark-mode footer {
+  background: #121212;
+  color: #f3d46d;
+  border-top: 2px solid #f3d46d;
+}
+body.dark-mode header {
+  background: #121212;
+  border-bottom: 2px solid #f3d46d;
+}
+body.dark-mode header h1, body.dark-mode footer h3 {
+  color: #f3d46d;
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  header h1 { font-size: 2.2rem; }
+  .prayer { padding: 20px; }
+  footer { font-size: 0.9rem; }
+}
+
+/* === NAVIGATION === */
+.main-nav {
+  background-color: rgba(0, 0, 0, 0.12);
+  padding: 10px 0;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #d9a94c;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background-color: #f3d46d;
+  border: 0.5px solid #b78b32;
+  color: #4a3b2f;
+}

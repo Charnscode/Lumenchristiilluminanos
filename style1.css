@@ -1,0 +1,331 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --accent-color: #d4af37; /* doré professionnel */
+  --shadow-color: rgba(0, 0, 0, 0.15);
+  --bg-overlay: rgba(20, 20, 20, 0.55);
+  --accent: #f5cc4f; /* or clair lumineux */
+  --muted: #d0d0d0;
+  --max-width: 1000px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #f5f5f5;
+  transition: all 0.5s ease;
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #0e0e0e;
+  line-height: 1.5;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+/* ===========================================================
+   EN-TÊTE (HEADER)
+   =========================================================== */
+
+.site-header {
+  padding: 28px 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.45));
+  backdrop-filter: blur(3px);
+  margin-bottom: 1em;
+}
+
+.site-header h1 {
+  margin: 0 0 8px;
+  font-size: 100%;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+  text-shadow: 0 0 10px var(--accent);
+  color: var(--accent);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 15px;
+  color: var(--muted);
+  text-align: center;
+}
+
+
+/* ===========================================================
+   NAVIGATION PRINCIPALE
+   =========================================================== */
+
+.main-nav {
+  background-color: rgba(128, 128, 128, 0.222);
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background-color: var(--accent);
+  box-shadow: 0 0 8px #fff6b0;
+  color: #000;
+}
+
+
+/* ===========================================================
+   NAVIGATION SECONDAIRE (SAINTS)
+   =========================================================== */
+
+.saints-nav {
+  background-color: rgba(255, 215, 0, 0.1);
+  padding: 8px 0;
+  border-radius: 8px;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  /* Masquer la barre de défilement */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  
+}
+
+.saints-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.saints-nav ul {
+  list-style: none;
+  padding: 0 10px;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.saints-nav a {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 6px;
+  color: #ffe799;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.saints-nav a:hover {
+  background-color: var(--accent);
+  color: #000;
+  box-shadow: 0 0 6px #fff7c5;
+}
+
+
+/* ===========================================================
+   CONTENU PRINCIPAL
+   =========================================================== */
+
+main.container {
+  padding: 40px 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  transition: background-color 0.4s ease;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+
+/* ===========================================================
+   CARTES (CARDS)
+   =========================================================== */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background-color: rgba(30, 30, 30, 0.65);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left;
+  color: #f8f8f8;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(245, 204, 79, 0.8);
+}
+
+
+/* ===========================================================
+   BOUTONS
+   =========================================================== */
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 14px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid var(--accent);
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--accent);
+  color: #000;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 10px rgba(245, 204, 79, 0.7);
+}
+
+
+/* ===========================================================
+   TITRES
+   =========================================================== */
+
+h2 {
+  color: var(--accent);
+  margin-top: 6px;
+  text-align: center;
+  text-shadow: 2px 2px 8px #000, 0 0 10px rgba(255, 215, 0, 0.7);
+}
+
+
+/* ===========================================================
+   IMAGES DE FOND PAR PAGE
+   =========================================================== */
+
+body.home {
+  background: url('S.jpg') center/cover no-repeat fixed;
+}
+
+body.carlo {
+  background: linear-gradient(rgba(0, 0, 0, 0.217), rgba(15, 15, 15, 0.291)), url('C.jpg') center/cover no-repeat fixed;
+}
+
+body.giorgio {
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(20, 20, 20, 0.217)), url('F.jpg') center/cover no-repeat fixed;
+}
+
+body.padrepio {
+  background: linear-gradient(rgba(0, 0, 0, 0.275), rgba(25, 25, 25, 0.6)), url('p.jpg') center/cover no-repeat fixed;
+}
+
+body.tarcisius {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(15, 15, 15, 0.282)), url('T.jpg') center/cover no-repeat fixed;
+}
+
+body.augustin {
+  background: linear-gradient(rgba(0, 0, 0, 0.273), rgba(15, 15, 15, 0.313)), url('A.jpg') center/cover no-repeat fixed;
+}
+
+body.therese {
+  background: linear-gradient(rgba(0, 0, 0, 0.233), rgba(10, 10, 10, 0.256)), url('R.jpg') center/cover no-repeat fixed;
+}
+
+body.rita {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(15, 15, 15, 0.296)), url('Ri.jpg') center/cover no-repeat fixed;
+}
+
+body.charbel {
+  background: linear-gradient(rgba(0, 0, 0, 0.257), rgba(20, 20, 20, 0.308)), url('b1.jpg') center/cover no-repeat fixed;
+}
+
+
+/* ===========================================================
+   PIED DE PAGE (FOOTER)
+   =========================================================== */
+
+.site-footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--accent);
+  text-align: center;
+  padding: 25px 10%;
+  border-top: 2px solid var(--accent);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+/* ===========================================================
+   RESPONSIVE DESIGN
+   =========================================================== */
+
+@media (max-width: 640px) {
+  .site-header h1 {
+    font-size: 18px;
+  }
+
+  .container {
+    padding: 12px;
+  }
+
+  .main-nav {
+    gap: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 20px 5%;
+  }
+
+  .site-title {
+    font-size: 1.6rem;
+  }
+
+  main.container {
+    padding: 20px 5%;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .saints-nav ul {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0 5px;
+  }
+
+  .saints-nav a {
+    flex: 0 0 auto;
+  }
+}
+ 
