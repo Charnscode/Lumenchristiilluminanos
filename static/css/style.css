@@ -78,7 +78,7 @@ header h2 {
   color: #ffe1bf;
 }
 
-/* === NAVIGATION === */
+/* NAVIGATION */
 .main-nav {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 10px 0;
@@ -196,17 +196,17 @@ footer {
 }
 
 .filigrane {
-    position: fixed;        /* Reste à l'écran même en scrollant */
-    top: 50%;               /* Centré verticalement */
-    left: 50%;              /* Centré horizontalement */
-    transform: translate(-50%, -50%) rotate(-30deg); /* Centré et légèrement incliné */
-    font-size: 5em;         /* Taille du texte */
-    color: rgba(0, 0, 0, 0.08); /* Couleur noire très claire, presque transparente */
-    font-weight: bold;      /* Texte gras */
-    pointer-events: none;   /* Pour que le filigrane ne gêne pas les clics sur le contenu */
-    z-index: 0;             /* Derrière le contenu */
+    position: fixed;        
+    top: 50%;               
+    left: 50%;             
+    transform: translate(-50%, -50%) rotate(-30deg); 
+    font-size: 5em;
+    color: rgba(0, 0, 0, 0.08); 
+    font-weight: bold;      
+    pointer-events: none;  
+    z-index: 0;             
     text-align: center;
-    white-space: nowrap;    /* Pas de retour à la ligne automatique */
+    white-space: nowrap;    
 }
 
 .dark-mode .filigrane {
