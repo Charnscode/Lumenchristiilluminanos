@@ -231,7 +231,7 @@ h2 {
    =========================================================== */
 
 body.home {
-  background: url('S.jpg') center/cover no-repeat fixed;
+  background: url("/static/img/S.jpg") center/cover no-repeat fixed;
 }
 
 body.carlo {
