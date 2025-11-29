@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Saint Tarcisius</title>
-  <link rel="stylesheet" href="style1.css" /> <!-- Style principal -->
+  <link rel="stylesheet" href="{% static 'css/style1.css' %}" /> <!-- Style principal -->
 </head>
 
 <body class="tarcisius"> <!-- Classe spécifique pour cette page -->
@@ -15,15 +16,15 @@
       <h1>Saint Tarcisius</h1>
       <nav class="saints-nav">
       <ul>
-        <li> <a href="about.html">Accueil</a></li>
-        <li><a href="carlo.html">Carlo Acutis</a></li>
-        <li><a href="giorgio.html">Pier Giorgio</a></li>
-        <li><a href="padrepio.html">Padre Pio</a></li>
-        <li><a href="tarcisius.html">Tarcisius</a></li>
-        <li><a href="augustin.html">Saint Augustin</a></li>
-        <li><a href="therese.html">Sainte Thérèse</a></li>
-        <li><a href="rita.html">Sainte Rita</a></li>
-        <li><a href="charbel.html">Charbel Makhlouf</a></li>
+       <li><a href="{% url 'LumenChristiilluminanos_app:about' %}">Accueil</a></li>
+          <li><a href="{% url 'LumenChristiilluminanos_app:carlo' %}">Carlo Acutis</a></li>
+          <li><a href="{% url 'LumenChristiilluminanos_app:giorgio' %}">Pier Giorgio</a></li>
+          <li><a href="{% url 'LumenChristiilluminanos_app:padrepio' %}">Padre Pio</a></li>
+          <li><a href="{% url 'LumenChristiilluminanos_app:tarcisius' %}">Tarcisius</a></li>
+          <li><a href="{% url 'LumenChristiilluminanos_app:augustin' %}">Saint Augustin</a></li>
+          <li><a href="{% url 'LumenChristiilluminanos_app:therese' %}">Sainte Thérèse</a></li>
+          <li><a href="{% url 'LumenChristiilluminanos_app:rita' %}">Sainte Rita</a></li>
+          <li><a href="{% url 'LumenChristiilluminanos_app:charbel' %}">Charbel Makhlouf</a></li>
       </ul>
     </nav>
     </div>
@@ -87,7 +88,7 @@ Son culte se développa très vite dans l’Église, comme exemple de courage, d
   <footer class="site-footer">
     "Saint Tarcisius - Priez pour nous"
     <div style="margin: auto;" class="btn">
-      <a style="color: white;" href="about.html">← Retour</a>
+      <a style="color: white;" href="{% url 'LumenChristiilluminanos_app:about' %}">← Retour</a>
     </div>
   </footer>
 

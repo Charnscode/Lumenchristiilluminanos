@@ -76,7 +76,7 @@
     <section id="contact" class="section-alt">
       <h2>Contact</h2>
       <p>Tu veux échanger, poser une question ou proposer une ressource ?</p>
-      <form id="contactForm" class="contact-form" action="#" onsubmit="return submitForm(event)">
+      <form id="contactForm" class="contact-form" action="#" onsubmit="return submitForm(event)" method="post">
         {% csrf_token %}
         <label>Nom <input type="text" name="name" required placeholder="Votre nom" /></label>
         <label>E-mail <input type="email" name="email" required placeholder=".....@gmail.com" /></label>
