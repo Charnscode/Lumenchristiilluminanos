@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Saint Carlo Acutis</title>
-  <link rel="stylesheet" href="style1.css" />
+  <link rel="stylesheet" href="{% static 'css/style1.css' %}" />
 </head>
 
 <body class="carlo">
@@ -18,15 +19,15 @@
       <!-- === Menu de navigation === -->
       <nav class="saints-nav">
       <ul>
-		<li> <a href="about.html">Accueil</a></li>
-        <li><a href="carlo.html">Carlo Acutis</a></li>
-        <li><a href="giorgio.html">Pier Giorgio</a></li>
-        <li><a href="padrepio.html">Padre Pio</a></li>
-        <li><a href="tarcisius.html">Tarcisius</a></li>
-        <li><a href="augustin.html">Saint Augustin</a></li>
-        <li><a href="therese.html">Sainte Thérèse</a></li>
-        <li><a href="rita.html">Sainte Rita</a></li>
-        <li><a href="charbel.html">Charbel Makhlouf</a></li>
+		<li><a href="{% url 'LumenChristiilluminanos_app:about' %}">Accueil</a></li>
+          <li><a href="{% url 'LumenChristiilluminanos_app:carlo' %}">Carlo Acutis</a></li>
+          <li><a href="{% url 'LumenChristiilluminanos_app:giorgio' %}">Pier Giorgio</a></li>
+          <li><a href="{% url 'LumenChristiilluminanos_app:padrepio' %}">Padre Pio</a></li>
+          <li><a href="{% url 'LumenChristiilluminanos_app:tarcisius' %}">Tarcisius</a></li>
+          <li><a href="{% url 'LumenChristiilluminanos_app:augustin' %}">Saint Augustin</a></li>
+          <li><a href="{% url 'LumenChristiilluminanos_app:therese' %}">Sainte Thérèse</a></li>
+          <li><a href="{% url 'LumenChristiilluminanos_app:rita' %}">Sainte Rita</a></li>
+          <li><a href="{% url 'LumenChristiilluminanos_app:charbel' %}">Charbel Makhlouf</a></li>
       </ul>
     </nav>
     </div>
@@ -124,7 +125,7 @@ Carlo est né le 3 mai 1991 à Londres, où ses parents, Andrea Acutis et Antoni
   <footer class="site-footer">
     "Saint Carlo Acutis - Priez pour nous"
     <div class="btn" style="margin: auto;">
-      <a href="about.html" style="color: white;">← Retour</a>
+      <a href="{% url 'LumenChristiilluminanos_app:about' %}" style="color: white;">← Retour</a>
     </div>
   </footer>
 </body>
