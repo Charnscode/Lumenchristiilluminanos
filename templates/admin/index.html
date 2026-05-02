@@ -1,0 +1,80 @@
+{% extends "admin/base_site.html" %}
+{% load i18n log %}
+
+{% block bodyclass %}{{ block.super }} dashboard lumen-dashboard{% endblock %}
+
+{% block nav-breadcrumbs %}{% endblock %}
+
+{% block nav-sidebar %}{% endblock %}
+
+{% block content_title %}{% endblock %}
+
+{% block content %}
+  <div class="lumen-dashboard-grid">
+    <section class="lumen-hero-card">
+      <p class="lumen-kicker">Administration</p>
+      <h1>Le back-office de Lumenchristiilluminanos</h1>
+      <p class="lumen-lead">
+        Supervisez les acces, organisez les contenus et gardez une interface
+        d'administration en harmonie avec l'univers visuel de la plateforme.
+      </p>
+      <div class="lumen-actions">
+        {% if site_url %}
+          <a class="button" href="{{ site_url }}">Voir la plateforme</a>
+        {% endif %}
+        <a class="button button-secondary" href="{% url 'admin:auth_user_changelist' %}">
+          Gerer les utilisateurs
+        </a>
+      </div>
+    </section>
+
+    <section class="lumen-panel">
+      <div class="lumen-panel__header">
+        <h2>Espaces d'administration</h2>
+        <p>Les modules disponibles restent natifs Django, mais leur presentation est personnalisee.</p>
+      </div>
+      <div id="content-main">
+        {% include "admin/app_list.html" with app_list=app_list show_changelinks=True %}
+      </div>
+    </section>
+
+    <aside class="lumen-panel lumen-panel--side" id="recent-actions-module">
+      <div class="lumen-panel__header">
+        <h2>{% translate 'Recent actions' %}</h2>
+        <p>Un resume de vos dernieres modifications pour garder le suivi du back-office.</p>
+      </div>
+      {% get_admin_log 8 as admin_log for_user user %}
+      {% if not admin_log %}
+        <p class="lumen-empty">{% translate 'None available' %}</p>
+      {% else %}
+        <ul class="lumen-activity-list">
+          {% for entry in admin_log %}
+            <li class="lumen-activity-list__item">
+              <span class="lumen-activity-list__meta">
+                {% if entry.content_type %}
+                  {{ entry.content_type.name|capfirst }}
+                {% else %}
+                  {% translate 'Unknown content' %}
+                {% endif %}
+              </span>
+              {% if entry.is_deletion or not entry.get_admin_url %}
+                <strong>{{ entry.object_repr }}</strong>
+              {% else %}
+                <a href="{{ entry.get_admin_url }}"><strong>{{ entry.object_repr }}</strong></a>
+              {% endif %}
+              <span class="lumen-activity-list__state">
+                {% if entry.is_addition %}
+                  {% translate 'Added' %}
+                {% elif entry.is_change %}
+                  {% translate 'Changed' %}
+                {% elif entry.is_deletion %}
+                  {% translate 'Deleted' %}
+                {% endif %}
+              </span>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </aside>
+  </div>
+{% endblock %}

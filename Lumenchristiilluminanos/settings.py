@@ -89,6 +89,7 @@ DATABASES = {
     }
 }
 
+
 # EMAIL configuration
 # https://docs.djangoproject.com
 
